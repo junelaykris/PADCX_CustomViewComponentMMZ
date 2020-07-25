@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="10dp"
+    android:orientation="vertical">
+  <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Category"
+    android:textColor="#FFFFFF"/>
+ <LinearLayout
+     android:layout_height="match_parent"
+     android:layout_width="match_parent"
+     android:orientation="horizontal">
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_greenbg"
+        android:drawableLeft="@drawable/ic_baseline_check_24"
+        android:padding="5dp"
+        android:text="Design"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"/>
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_whitebg"
+        android:padding="5dp"
+        android:text="FrontEnd"
+        android:textAllCaps="false"
+        android:textColor="#151414"/>
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/rounded_whitebg"
+        android:padding="5dp"
+        android:text="BackEnd"
+        android:textAllCaps="false"
+        android:textColor="#151414"/>
+</LinearLayout>
+</LinearLayout>
