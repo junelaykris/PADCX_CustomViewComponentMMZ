@@ -13,6 +13,12 @@ class PeopleViewHolder(itemView: View, private val mDelegate: PeopleListActionDe
     : BaseViewHolder<UserVO>(itemView) {
 
     init {
+        itemView.setOnClickListener {
+            mData?.let {
+                mDelegate.onTap(it, itemView.imageitem)
+            }
+        }
+
         itemView.imageitem.setOnClickListener {
             mData?.let {
                 mDelegate.onTap(it, itemView.imageitem)
