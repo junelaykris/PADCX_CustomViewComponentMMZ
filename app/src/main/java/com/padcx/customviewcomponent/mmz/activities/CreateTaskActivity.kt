@@ -63,7 +63,7 @@ class CreateTaskActivity : AppCompatActivity(), MainView {
 
         layout_btn.btn_design.setOnClickListener {
             layout_btn.btn_design.setBackgroundResource(R.drawable.rounded_greenbg)
-            layout_btn.btn_front.setTextColor(ContextCompat.getColor(this,R.color.color_white))
+            layout_btn.btn_design.setTextColor(ContextCompat.getColor(this,R.color.color_white))
             layout_btn.btn_design.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_baseline_check_24, 0, 0, 0);
 
             layout_btn.btn_front.setBackgroundResource(R.drawable.rounded_whitebg)
