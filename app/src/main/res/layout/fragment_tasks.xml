@@ -2,13 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
+    <com.padcx.customviewcomponent.mmz.views.components.SmartRecyclerView
+        android:id="@+id/rv_usertask"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Task Fragments"/>
+        android:layout_height="match_parent"
+        tools:listitem="@layout/user_list_item" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

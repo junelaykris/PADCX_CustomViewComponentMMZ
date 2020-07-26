@@ -12,8 +12,16 @@
           android:id="@+id/toolbar"/>
       <include layout="@layout/client_layout"/>
       <include layout="@layout/editext_gp_layout"/>
-      <include layout="@layout/assignee_layout"/>
-      <include layout="@layout/button_layout"/>
+
+     <!-- <include layout="@layout/assignee_layout"/>-->
+
+      <include
+          android:id="@+id/rv_createtask"
+          layout="@layout/user_gp_layout"/>
+
+
+      <include android:id="@+id/layout_btn"
+          layout="@layout/button_layout"/>
       <include layout="@layout/create_task_dialog_layout"/>
    </LinearLayout>
 </ScrollView>

@@ -1,78 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="80dp"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:orientation="horizontal">
 
-    <com.padcx.customviewcomponent.mmz.views.components.RoundedCornerImageView
-        android:id="@+id/roundedCornerImageView"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="12dp"
-        android:scaleType="centerCrop"
-        app:border_color="#FFFFFF"
-        app:border_width="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.044"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/userone" />
-
-    <com.padcx.customviewcomponent.mmz.views.components.RoundedCornerImageView
-        android:id="@+id/roundedCornerImageView2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        app:border_color="#FFFFFF"
-        app:border_width="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.152"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        app:srcCompat="@drawable/usertwo" />
-
-    <com.padcx.customviewcomponent.mmz.views.components.RoundedCornerImageView
-        android:id="@+id/roundedCornerImageView4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        app:border_color="#FFFFFF"
-        app:border_width="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.257"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        app:srcCompat="@drawable/userthree" />
-
-    <com.padcx.customviewcomponent.mmz.views.components.RoundedCornerImageView
-        android:id="@+id/addbtn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:scaleType="centerCrop"
-        app:border_color="#8C8A8A"
-        app:border_width="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.368"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4"
-        app:srcCompat="@drawable/plus" />
+    <com.padcx.customviewcomponent.mmz.views.components.SmartRecyclerView
+        android:id="@+id/rv_createuser"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/user_list_item" />
 
     <com.padcx.customviewcomponent.mmz.views.components.CircularProgressBar
+        android:id="@+id/circularprogressbar"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/circularprogressbar"
+        app:mStrokeWidth="@dimen/margin_medium_3"
+        app:mTextColor="@color/color_dark_green"
+        app:mProgress="70"
+        android:layout_marginRight="@dimen/margin_medium"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.955"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.4" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

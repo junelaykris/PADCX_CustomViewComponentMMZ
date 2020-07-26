@@ -27,12 +27,14 @@
         android:textStyle="bold"
         android:text="03 days |  Dec 18 ,2019" />
 
-    <include layout="@layout/user_gp_layout"/>
+    <include
+        android:id="@+id/iv_recycler"
+        layout="@layout/user_gp_layout"/>
 
     <com.padcx.customviewcomponent.mmz.views.components.SmartRecyclerView
         android:id="@+id/rv_user"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/user_list_item" />
+        tools:listitem="@layout/user_list_item"/>
 
 </LinearLayout>

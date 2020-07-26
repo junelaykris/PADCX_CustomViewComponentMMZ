@@ -9,6 +9,8 @@ import android.graphics.RectF
 import android.util.AttributeSet
 import android.view.View
 import android.view.animation.DecelerateInterpolator
+import androidx.core.content.withStyledAttributes
+import com.padcx.customviewcomponent.mmz.R
 
 /**
  * Created by Myint Myint Zaw on 7/25/2020.
@@ -25,7 +27,7 @@ class CircularProgressBar @JvmOverloads constructor(
         -90f // Always start from top (default is: "3 o'clock on a watch.")
     private var mSweepAngle = 0f // How long to sweep from mStartAngle
     private val mMaxSweepAngle = 360f // Max degrees to sweep = full circle
-    private var mStrokeWidth = 20 // Width of outline
+    private var mStrokeWidth = 0f // Width of outline
     private val mAnimationDuration = 400 // Animation duration for progress change
     private val mMaxProgress = 100 // Max progress to use
     private var mDrawText = true // Set to true if progress text should be drawn
@@ -34,6 +36,7 @@ class CircularProgressBar @JvmOverloads constructor(
     private var mProgressColor = Color.BLACK // Outline color
     private var mTextColor = Color.BLACK // Progress text color
     private val mPaint: Paint
+    private var mProgressState = 0
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
@@ -92,8 +95,9 @@ class CircularProgressBar @JvmOverloads constructor(
      * @param progress progress between 0 and 100.
      */
     fun setProgress(progress: Int) {
+        mProgressState=progress
         val animator =
-            ValueAnimator.ofFloat(mSweepAngle, calcSweepAngleFromProgress(progress))
+            ValueAnimator.ofFloat(mSweepAngle, calcSweepAngleFromProgress(mProgressState))
         animator.interpolator = DecelerateInterpolator()
         animator.duration = mAnimationDuration.toLong()
         animator.addUpdateListener { valueAnimator ->
@@ -108,7 +112,7 @@ class CircularProgressBar @JvmOverloads constructor(
         invalidate()
     }
 
-    fun setProgressWidth(width: Int) {
+    fun setProgressWidth(width: Float) {
         mStrokeWidth = width
         invalidate()
     }
@@ -135,5 +139,9 @@ class CircularProgressBar @JvmOverloads constructor(
 
     init {
         mPaint = Paint(Paint.ANTI_ALIAS_FLAG)
+        context!!.withStyledAttributes(attrs, R.styleable.CircularProgressBar) {
+            mTextColor = getColor(R.styleable.CircularProgressBar_mTextColor, Color.BLACK)
+            mProgressState=getInt(R.styleable.CircularProgressBar_mProgress,0)
+        }
     }
 }

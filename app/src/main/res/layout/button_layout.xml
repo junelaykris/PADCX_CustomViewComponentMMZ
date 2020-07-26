@@ -16,6 +16,7 @@
      android:orientation="horizontal">
 
     <Button
+        android:id="@+id/btn_design"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
@@ -27,6 +28,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"/>
     <Button
+        android:id="@+id/btn_front"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"
@@ -38,6 +40,7 @@
         android:textColor="#151414"/>
 
     <Button
+        android:id="@+id/btn_backend"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="8dp"

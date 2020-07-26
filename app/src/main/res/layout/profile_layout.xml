@@ -18,7 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
 
         <include
-            android:id="@+id/profilelayout"
+            android:id="@+id/profileviewpod"
             layout="@layout/profile_data_layout" />
 
         <com.google.android.material.tabs.TabLayout
@@ -28,7 +28,7 @@
             android:layout_marginTop="@dimen/margin_medium"
             android:background="@color/color_white"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/profilelayout"
+            app:layout_constraintTop_toBottomOf="@+id/profileviewpod"
             app:tabIndicatorColor="@color/color_dark_green"
             app:tabMode="scrollable"
             app:tabSelectedTextColor="@color/color_black"

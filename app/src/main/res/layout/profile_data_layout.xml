@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.padcx.customviewcomponent.mmz.views.viewpods.ProfileViewPods xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,9 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
         <com.padcx.customviewcomponent.mmz.views.components.RoundedCornerImageView
             android:id="@+id/imgProfile"
@@ -22,29 +20,64 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:visibility="visible" />
 
-
-        <TextView
-            android:id="@+id/txt_close"
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
             android:layout_marginEnd="@dimen/margin_small"
-            android:text="Closed tasks \n 361"
-            android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
             app:layout_constraintEnd_toStartOf="@+id/imgProfile"
-            app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+            app:layout_constraintTop_toTopOf="@+id/imgProfile">
 
-        <TextView
-            android:id="@+id/txt_open"
+            <TextView
+                android:id="@+id/txt_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tvclosed_tasks"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_close_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_close"
+                android:layout_centerInParent="true"
+                android:text="361"
+                android:textColor="@color/color_black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_open"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
-            android:text="Open tasks \n 3"
-            android:textAlignment="center"
+            android:layout_marginEnd="@dimen/margin_small"
             app:layout_constraintBottom_toBottomOf="@+id/imgProfile"
             app:layout_constraintStart_toEndOf="@+id/imgProfile"
-            app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+            app:layout_constraintTop_toTopOf="@+id/imgProfile">
+
+            <TextView
+                android:id="@+id/txt_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_small"
+                android:text="@string/tvopen_tasks"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/txt_open_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_open"
+                android:layout_centerInParent="true"
+                android:text="3"
+                android:textColor="@color/color_black"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/tv_username"
@@ -52,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
             android:layout_marginTop="@dimen/margin_medium_2"
-            android:text="Zachary Butler"
+            android:text="@string/sample_name"
             android:textSize="25sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -64,7 +97,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_small"
-            android:text="UI Designer"
+            android:text="@string/lbl_jobname"
             android:textAlignment="center"
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -103,8 +136,8 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/rounded_greenbg"
-                android:text="MESSAGE"
-                android:textColor="#FFFFFF" />
+                android:text="@string/lbl_message"
+                android:textColor="@color/color_white" />
 
             <ImageView
                 android:id="@+id/iv_chart"
@@ -121,8 +154,9 @@
 
         </RelativeLayout>
 
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+</com.padcx.customviewcomponent.mmz.views.viewpods.ProfileViewPods>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--
+    </androidx.constraintlayout.widget.ConstraintLayout>-->

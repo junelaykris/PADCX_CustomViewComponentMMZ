@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">CustomViewComponentMMZ</string>
+    <string name="tvclosed_tasks">Closed tasks</string>
+    <string name="tvopen_tasks">Open tasks</string>
+    <string name="sample_name">Zachary Butler</string>
+    <string name="lbl_jobname">UI Designer</string>
+    <string name="lbl_message">MESSAGE</string>
 </resources>
